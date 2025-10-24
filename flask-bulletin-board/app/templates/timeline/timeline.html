@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+
+<body>
+  <h1>Timeline</h1>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+    {{ form.content.label }} {{ form.content() }}<br>
+    {{ form.submit() }}
+  </form>
+
+  <ul>
+    {% for post in posts %}
+    <li><b>{{ post.user.username }}</b>: {{ post.content }} ({{ post.created_at }})</li>
+    {% endfor %}
+  </ul>
+
+  <a href="{{ url_for('auth.logout') }}">Logout</a>
+</body>
+
+</html>

@@ -1,0 +1,17 @@
+# 環境変数ファイル
+.env
+
+# Pythonキャッシュ
+__pycache__/
+*.pyc
+
+# IDE設定
+.vscode/
+.idea/
+
+# ログ
+*.log
+
+# ビルド成果物
+dist/
+build/
